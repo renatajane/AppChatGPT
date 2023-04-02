@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yur6I5gRFkiqWx5B3Jtdfp3tCuWPM1sdZneqoH04elqZnoerhMXc9dU0DcSn+WYZJacW38B4f5ZyDiZBrHKY9g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Fauly\\source\\repos\\ChatApp\\ChatApp\\ChatApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fauly\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
