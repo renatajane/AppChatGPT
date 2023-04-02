@@ -14,8 +14,20 @@ namespace ChatApp
             InitializeComponent();
         }
         private void button1_Click(object sender, EventArgs e)
-        {  
-           Processar();
+        {
+            try
+            {
+                var validacao = string.IsNullOrWhiteSpace(txtChave.Text);
+                if (validacao)
+                {
+                    throw new Exception("Informe a OPENAI_API_KEY.");
+                }
+                Processar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void Processar()
@@ -33,7 +45,7 @@ namespace ChatApp
             var client = WebRequest.Create("https://api.openai.com/v1/chat/completions");
             client.Headers = new WebHeaderCollection();
             client.Headers["Content-Type"] = "application/json";
-            client.Headers["Authorization"] = "Bearer SuaChaveAqui";
+            client.Headers["Authorization"] = "Bearer " + txtChave.Text;
             client.Method = "POST";
 
             using (var streamWriter = new StreamWriter(client.GetRequestStream()))
@@ -56,6 +68,11 @@ namespace ChatApp
             txtPergunta.Text = "";
             button1.Text = "Enviar";
             button1.Enabled = true;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

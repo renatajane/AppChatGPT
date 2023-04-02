@@ -32,6 +32,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtResposta = new System.Windows.Forms.TextBox();
+            this.txtChave = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtPergunta
@@ -64,11 +66,28 @@
             // 
             // txtResposta
             // 
-            this.txtResposta.Location = new System.Drawing.Point(7, 12);
+            this.txtResposta.Location = new System.Drawing.Point(7, 43);
             this.txtResposta.Multiline = true;
             this.txtResposta.Name = "txtResposta";
-            this.txtResposta.Size = new System.Drawing.Size(781, 347);
+            this.txtResposta.Size = new System.Drawing.Size(781, 316);
             this.txtResposta.TabIndex = 3;
+            // 
+            // txtChave
+            // 
+            this.txtChave.Location = new System.Drawing.Point(201, 8);
+            this.txtChave.Name = "txtChave";
+            this.txtChave.Size = new System.Drawing.Size(576, 23);
+            this.txtChave.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Digite sua OPENAI_API_KEY:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
@@ -77,6 +96,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtChave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPergunta);
@@ -94,5 +115,7 @@
         private Button button1;
         private Label label1;
         private TextBox txtResposta;
+        private TextBox txtChave;
+        private Label label2;
     }
 }
